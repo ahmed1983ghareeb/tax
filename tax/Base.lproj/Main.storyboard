@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="tax" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="iBm-z7-4Oi">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quebec Tax Calculator" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xSi-2f-UR5">
+                                <rect key="frame" x="14.5" y="76" width="385" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" name="selectedMenuItemTextColor" catalog="System" colorSpace="catalog"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="fSM-z6-kNz">
+                                <rect key="frame" x="32" y="156" width="350" height="97"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your salaray" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e9m-uQ-Q6s" customClass="SalaryText" customModule="tax" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="36"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your provience" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QCb-bH-Q96" customClass="SalaryText" customModule="tax" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="61" width="350" height="36"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total tax = 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Csq-gJ-HAC" customClass="TaxLabel" customModule="tax" customModuleProvider="target">
+                                <rect key="frame" x="32" y="321" width="350" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tqS-vp-W6E">
+                                <rect key="frame" x="14" y="389" width="386" height="216"/>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Csq-gJ-HAC" secondAttribute="trailing" constant="32" id="05p-1D-2Br"/>
+                            <constraint firstItem="tqS-vp-W6E" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="14" id="4gX-Sd-b5R"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="iBm-z7-4Oi" secondAttribute="bottom" id="50U-qH-Awt"/>
+                            <constraint firstItem="iBm-z7-4Oi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="541-lZ-O5N"/>
+                            <constraint firstItem="xSi-2f-UR5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8cz-Rh-orP"/>
+                            <constraint firstItem="Csq-gJ-HAC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="Ka7-AB-eih"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fSM-z6-kNz" secondAttribute="trailing" constant="32" id="Qd0-yt-VuY"/>
+                            <constraint firstItem="tqS-vp-W6E" firstAttribute="top" secondItem="Csq-gJ-HAC" secondAttribute="bottom" constant="32" id="a3F-2d-gJa"/>
+                            <constraint firstItem="Csq-gJ-HAC" firstAttribute="top" secondItem="fSM-z6-kNz" secondAttribute="bottom" constant="68" id="byx-Os-lBs"/>
+                            <constraint firstItem="fSM-z6-kNz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="dK7-QO-MdD"/>
+                            <constraint firstItem="Csq-gJ-HAC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lyV-u2-HsG"/>
+                            <constraint firstItem="xSi-2f-UR5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="m9p-A1-gLr"/>
+                            <constraint firstAttribute="trailing" secondItem="tqS-vp-W6E" secondAttribute="trailing" constant="14" id="oPd-CM-sol"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iBm-z7-4Oi" secondAttribute="trailing" id="oZg-pM-1tl"/>
+                            <constraint firstItem="fSM-z6-kNz" firstAttribute="top" secondItem="xSi-2f-UR5" secondAttribute="bottom" constant="32" id="tr3-Qu-jyW"/>
+                            <constraint firstItem="iBm-z7-4Oi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="uGx-NJ-952"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="provienceTextField" destination="QCb-bH-Q96" id="bBe-AW-mB2"/>
+                        <outlet property="provincePicker" destination="tqS-vp-W6E" id="cqP-6K-fmV"/>
+                        <outlet property="salaryTextField" destination="e9m-uQ-Q6s" id="MqZ-AP-Kfb"/>
+                        <outlet property="taxLabel" destination="Csq-gJ-HAC" id="fvG-IU-ELJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="683" height="1024"/>
+    </resources>
+</document>
